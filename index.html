@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de gorjetas">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Felipe Eduardo">
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id="container">
+        <span class="emoji">🧾</span>
+        <div>
+            <h1 class="title">Calculadora de gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="bill">
+                    <p>Quanto ficou a conta ?</p>
+                </label>
+                <p>R$ <input type="number" name="bill" id="bill" class="formInput-a" placeholder="100" min="0" required></p>
+    
+                <label for="serviceQuality">
+                    <p>Como foi seu serviço ?</p>
+                </label>
+                <p>
+                    <select name="serviceQuality" id="serviceQuality" class="formSelect" required>
+                        <option value="0" disabled selected>-- Escolha uma opção</option>
+                        <option value="0.3">30% - Incrível</option>
+                        <option value="0.2">20% - Bom</option>
+                        <option value="0.15">15% - Aceitável</option>
+                        <option value="0.1">10% - Ruim</option>
+                        <option value="0.01">0% - Péssimo</option>
+                    </select>
+                </p>
+    
+                <label for="people">
+                    <p>Quantas pessoas vão dividir a conta ?</p>
+                </label>
+                <p> <input type="number" name="people" id="people" class="formInput-b" placeholder="1" min="0" required>pessoa(s)</p>
+                <button type="submit" class="formSubmit">Calcular ‼</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorjeta total:
+            R$ <span id="tip">0.00</span>
+            <span id="each">cada</span>
+        </div>
+        <footer class="footer">Felipe Eduardo 🧑‍🚀</footer>
+    </div>
+
+    <script type="text/javascript" src="src/js/index.js"></script>
+</body>
+</html>
